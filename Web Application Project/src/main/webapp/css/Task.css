@@ -1,0 +1,396 @@
+@charset "ISO-8859-1";
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/image background.png');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 50px;
+}
+nav {
+    background-color: rgba(68, 68, 68, 0.9);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff9800;
+}
+
+nav ul li a .nav-image {
+    height: 50px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+nav ul li.profile-menu {
+    position: relative;
+}
+
+.profile-icon {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+  input, textarea{
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+   	background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    
+    }
+    
+    .fehlerfeld{
+    	font-size: small;
+    	font-family: Arial, sans-serif;
+    	text-overflow: clip;
+    	font-weight: lighter;
+
+    }
+    
+    
+    #btn{
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+   	/*background-color: rgba(255, 255, 255, 0.8);*/
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    	
+    
+    }
+    
+    #kurz{
+    
+    width: 90px;
+    padding: 10px;
+    box-sizing: border-box;
+   	/*background-color: rgba(255, 255, 255, 0.8);*/
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    }
+    
+    /* Anpassung der Nav-Pills */
+.nav-pills .nav-link.custom-nav-link {
+    background-color: rgba(68, 68, 68, 0.9);
+    color: #fff;
+    border-radius: 8px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.custom-nav-link:hover {
+    background-color: #ff9800;
+}
+
+.nav-pills .nav-link.custom-nav-link.active {
+    background-color: #ff9800;
+}
+
+/* Anpassung des Inhaltsbereichs */
+.custom-tab-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Anpassung der Formulareingabefelder */
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Anpassung der Schaltflächen */
+.btn-primary {
+    background-color: #ff9800;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+
+.btn-secondary {
+    background-color: rgba(68, 68, 68, 0.9);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}
+   
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#portalview{
+	background-image: none;	
+	
+}
+
+
+#HelloTask{
+	list-style-type: none;
+	margin: 10px;
+     display: inline;
+     text-decoration: none;
+       font-weight: bold;
+}
+.tooltip {
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    border-radius: 12px; 
+    max-width: 350px; 
+    text-align:center;
+
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    font-size: 16px; 
+    border: 2px ; 
+    display: none; 
+    z-index: 10; 
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0) transparent transparent transparent;
+}
+
+/* Formatierung für die Tabs*/
+
+
+ul.nav {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+/*.nav-item{
+    display: block; 
+    margin-bottom: 5px; /* Abstand zwischen den Listenelementen 
+}*/
+
+
+
+/* Grundlegende Stile */
+        .form-section {
+            display: none; /* Versteckt alle Abschnitte standardmäßig */
+        }
+        .form-section.active {
+            display: block; /* Zeigt den aktiven Abschnitt an */
+        }
+        .form-summary {
+            display: none; /* Versteckt die Zusammenfassung standardmäßig */
+        }
+
+
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-summary {
+    display: block;
+    margin-top: 20px;
+}
+
+
+/* Formatierung für die Tabellen */
+
+.styled-table {
+    width: 80%; /* Breite der Tabelle auf 80% der Elternbreite begrenzen */
+    max-width: 800px; /* Maximale Breite der Tabelle */
+    margin: 25px auto; /* Automatische horizontale Ränder für Zentrierung */
+    border-collapse: collapse;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Tabellenzellen */
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+/* Tabellenzeilen */
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
